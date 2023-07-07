@@ -1,5 +1,5 @@
-import Header from "@/components/Header"
-import { motion } from "framer-motion"
+import Header from '@/components/Header'
+import { motion } from 'framer-motion'
 
 export default function Home() {
   return (
