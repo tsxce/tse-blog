@@ -21,6 +21,7 @@ export default function ParticleCanvas({
   const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 })
   const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 })
   const dpr = typeof window !== 'undefined' ? window.devicePixelRatio : 1
+  
   useEffect(() => {    
     if (canvasRef.current) {
       context.current = canvasRef.current.getContext('2d')
@@ -32,9 +33,11 @@ export default function ParticleCanvas({
       window.removeEventListener('resize', initCanvas)
     }
   }, [])
+
   useEffect(() => {
     onMouseMove()
   }, [mousePosition.x, mousePosition.y])
+
   const initCanvas = () => {
     resizeCanvas()
     drawParticles()
