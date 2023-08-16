@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react'
-import LightDarkSwitcher from '../Button/LightDarkSwitcher'
+// import LightDarkSwitcher from '../Button/LightDarkSwitcher'
 
 export default function Header() {
   const headerRef = useRef<HTMLDivElement>(null)
@@ -58,8 +58,9 @@ export default function Header() {
       ) : (
         ''
       )}
-      <p>LOGO</p>
-      <LightDarkSwitcher />
+      <p className='font-extrabold'>TSE</p>
+      <div></div>
+      {/* <LightDarkSwitcher /> */}
     </div>
   )
 }
