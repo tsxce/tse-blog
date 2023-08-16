@@ -6,6 +6,9 @@ body {
   /* @apply dark:bg-black dark:text-white; */
   @apply bg-bgDark text-textWhite;
 }
+body::-webkit-scrollbar{
+  display: none;
+}
 
 .sticky-nav {
   position: sticky;
