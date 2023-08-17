@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
-
+import LightCircle from '../LightCircle'
 export default function ProfilePage({ profileRef }) {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
-  console.log(mousePos)
+
   useEffect(() => {
     const handleMouseMove = (event) => {
       setMousePos({ x: event.clientX, y: event.clientY })
@@ -15,10 +15,11 @@ export default function ProfilePage({ profileRef }) {
     }
   }, [])
   return (
-    <div ref={profileRef} className="w-screen h-screen snap-start">
+    <div ref={profileRef} className="relative w-screen h-screen snap-start">
+      <LightCircle x={mousePos.x} y={mousePos.y} />
       <div className="w-[1088px] mx-auto lg:flex lg:justify-between lg:gap-4">
         <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:py-24">
-          <p className="font-bold text-5xl">Nick Tse{mousePos.x}</p>
+          <p className="font-bold text-5xl">Nick Tse</p>
           <p className="text-lg mt-3">Frontend engineer</p>
           <p className="text-textGrey mt-4 max-w-xs">
             I build accessible, inclusive products and digital experiences for
