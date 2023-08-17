@@ -6,8 +6,18 @@ body {
   /* @apply dark:bg-black dark:text-white; */
   @apply bg-bgDark text-textWhite;
 }
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
   display: none;
+}
+
+/* body:focus-visible {
+  outline: 2px dashed #64ffda;
+  outline-offset: 3px;
+} */
+
+:focus {
+  outline: 2px dashed #64ffda;
+  outline-offset: 3px;
 }
 
 .sticky-nav {

@@ -13,7 +13,7 @@ module.exports = {
       borderGray: '#242428',
       purple: '#8273F7',
       textWhite: '#F1F1F3',
-      textGrey: '#908F99'
+      textGrey: '#908F99',
     },
     extend: {
       backgroundImage: {
@@ -26,7 +26,7 @@ module.exports = {
         fade: 'fadeOut 5s ease-in-out',
       },
       // that is actual animation
-      keyframes: theme => ({
+      keyframes: (theme) => ({
         fadeOut: {
           '0%': { backgroundColor: theme('colors.purple') },
           '100%': { backgroundColor: theme('colors.transparent') },

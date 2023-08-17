@@ -21,8 +21,8 @@ export default function ParticleCanvas({
   const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 })
   const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 })
   const dpr = typeof window !== 'undefined' ? window.devicePixelRatio : 1
-  
-  useEffect(() => {    
+
+  useEffect(() => {
     if (canvasRef.current) {
       context.current = canvasRef.current.getContext('2d')
     }
@@ -78,7 +78,7 @@ export default function ParticleCanvas({
     dx: number
     dy: number
     magnetism: number
-  }  
+  }
   const circleParams = (): Circle => {
     const x = Math.floor(Math.random() * canvasSize.current.w)
     const y = Math.floor(Math.random() * canvasSize.current.h)
@@ -90,7 +90,18 @@ export default function ParticleCanvas({
     const dx = (Math.random() - 0.5) * 0.2
     const dy = (Math.random() - 0.5) * 0.2
     const magnetism = 0.1 + Math.random() * 4
-    return { x, y, translateX, translateY, size, alpha, targetAlpha, dx, dy, magnetism }
+    return {
+      x,
+      y,
+      translateX,
+      translateY,
+      size,
+      alpha,
+      targetAlpha,
+      dx,
+      dy,
+      magnetism,
+    }
   }
   const drawCircle = (circle: Circle, update = false) => {
     if (context.current) {
@@ -108,7 +119,12 @@ export default function ParticleCanvas({
   }
   const clearContext = () => {
     if (context.current) {
-      context.current.clearRect(0, 0, canvasSize.current.w, canvasSize.current.h)
+      context.current.clearRect(
+        0,
+        0,
+        canvasSize.current.w,
+        canvasSize.current.h,
+      )
     }
   }
   const drawParticles = () => {
@@ -124,9 +140,10 @@ export default function ParticleCanvas({
     start1: number,
     end1: number,
     start2: number,
-    end2: number
+    end2: number,
   ): number => {
-    const remapped = ((value - start1) * (end2 - start2)) / (end1 - start1) + start2
+    const remapped =
+      ((value - start1) * (end2 - start2)) / (end1 - start1) + start2
     return remapped > 0 ? remapped : 0
   }
   const animate = () => {
@@ -140,7 +157,9 @@ export default function ParticleCanvas({
         canvasSize.current.h - circle.y - circle.translateY - circle.size, // distance from bottom edge
       ]
       const closestEdge = edge.reduce((a, b) => Math.min(a, b))
-      const remapClosestEdge = parseFloat(remapValue(closestEdge, 0, 20, 0, 1).toFixed(2))
+      const remapClosestEdge = parseFloat(
+        remapValue(closestEdge, 0, 20, 0, 1).toFixed(2),
+      )
       if (remapClosestEdge > 1) {
         circle.alpha += 0.02
         if (circle.alpha > circle.targetAlpha) circle.alpha = circle.targetAlpha
@@ -149,8 +168,12 @@ export default function ParticleCanvas({
       }
       circle.x += circle.dx
       circle.y += circle.dy
-      circle.translateX += ((mouse.current.x / (staticity / circle.magnetism)) - circle.translateX) / ease
-      circle.translateY += ((mouse.current.y / (staticity / circle.magnetism)) - circle.translateY) / ease
+      circle.translateX +=
+        (mouse.current.x / (staticity / circle.magnetism) - circle.translateX) /
+        ease
+      circle.translateY +=
+        (mouse.current.y / (staticity / circle.magnetism) - circle.translateY) /
+        ease
       // circle gets out of the canvas
       if (
         circle.x < -circle.size ||
@@ -174,7 +197,7 @@ export default function ParticleCanvas({
             translateY: circle.translateY,
             alpha: circle.alpha,
           },
-          true
+          true,
         )
       }
     })

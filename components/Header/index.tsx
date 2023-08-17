@@ -58,7 +58,7 @@ export default function Header() {
       ) : (
         ''
       )}
-      <p className='font-extrabold'>TSE</p>
+      <p className="font-extrabold">TSE</p>
       <div></div>
       {/* <LightDarkSwitcher /> */}
     </div>
