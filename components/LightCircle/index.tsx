@@ -1,6 +1,6 @@
 import React from 'react'
 
-const r = 400
+const r = 600
 
 export default function LightCircle({ x, y }) {
   return (

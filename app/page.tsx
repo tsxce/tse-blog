@@ -11,11 +11,11 @@ import ProjectPage from '@/components/ProjectPage'
 
 export default function Home() {
   const canvasRef = useRef(null)
-  const profileRef = useRef(null)
+  // const profileRef = useRef(null)
 
-  const handleScrollDownBtn = () => {
-    profileRef.current?.scrollIntoView({ behavior: 'smooth' })
-  }
+  // const handleScrollDownBtn = () => {
+  //   profileRef.current?.scrollIntoView({ behavior: 'smooth' })
+  // }
 
   return (
     <main
@@ -43,12 +43,12 @@ export default function Home() {
         </p>
         <p
           className="absolute text-xl animate-pulse bottom-[20px] left-1/2 transform -translate-x-1/2 cursor-pointer"
-          onClick={handleScrollDownBtn}
+          // onClick={handleScrollDownBtn}
         >
           Scroll Down
         </p>
       </div>
-      <ProfilePage profileRef={profileRef} />
+      <ProfilePage />
       <ProjectPage />
     </main>
   )

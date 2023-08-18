@@ -1,7 +1,12 @@
 import { useState, useEffect } from 'react'
 import LightCircle from '../LightCircle'
-export default function ProfilePage({ profileRef }) {
+import { useInView } from 'react-intersection-observer';
+
+export default function ProfilePage() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
+  const { ref, inView, entry } = useInView({
+    threshold: 0.2,
+  });
 
   useEffect(() => {
     const handleMouseMove = (event) => {
@@ -14,9 +19,10 @@ export default function ProfilePage({ profileRef }) {
       window.removeEventListener('mousemove', handleMouseMove)
     }
   }, [])
+  
   return (
-    <div ref={profileRef} className="relative w-screen h-screen snap-start">
-      <LightCircle x={mousePos.x} y={mousePos.y} />
+    <div ref={ref} className="relative w-screen h-screen snap-start">
+      {inView && <LightCircle x={mousePos.x} y={mousePos.y} />}
       <div className="w-[1088px] mx-auto lg:flex lg:justify-between lg:gap-4">
         <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:py-24">
           <p className="font-bold text-5xl">Nick Tse</p>
