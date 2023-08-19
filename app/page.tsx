@@ -1,21 +1,19 @@
+'use client'
+import { useEffect } from 'react'
 import Image from 'next/image'
 import ParticleCanvas from '@/components/ParticleCanvas'
 import ParticleMask from '../images/particleMask.svg'
 import { noto_sans } from './font'
-
+import SideStepper from '@/components/SideStepper'
 import ProfilePage from '@/components/ProfilePage'
 
 export default function Home() {
   return (
-    <main
-      className={
-        noto_sans.className +
-        ' snap-y snap-mandatory h-screen w-screen overflow-x-hidden'
-      }
-    >
+    <main className={noto_sans.className + ' relative h-screen'}>
+      <SideStepper />
       <div
         id="canvas-section"
-        className="relative w-full flex justify-center items-center snap-start"
+        className="relative flex justify-center items-center snap-start"
       >
         <Image
           className="h-screen w-screen"
@@ -34,6 +32,7 @@ export default function Home() {
         </p>
       </div>
       <ProfilePage />
+      <div className="h-screen bg-purple"></div>
     </main>
   )
 }
