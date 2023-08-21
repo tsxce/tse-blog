@@ -7,14 +7,14 @@ export default function SideStepper() {
   const screenNum = totalHeight / viewHeight
   const list = [...Array(screenNum).keys()]
   const refArray = useRef([])
-
+  console.log('~~~: ', typeof scrollPosition)
   const addIndexColor = useCallback(
     (p) => {
       refArray.current.forEach((refItem, index) => {
         if (index === p) {
-          refItem.classList.add('fill-purple')
+          refItem?.classList.add('fill-purple')
         } else {
-          refItem.classList.remove('fill-purple')
+          refItem?.classList.remove('fill-purple')
         }
       })
     },
@@ -25,23 +25,27 @@ export default function SideStepper() {
     addIndexColor(colorIndex)
   }, [scrollPosition, viewHeight, addIndexColor])
   return (
-    <div className="fixed flex right-0 top-1/2 z-10 rotate-90 transform -translate-y-1/2 w-[100px] h-[20px]">
-      {list.map((x) => {
-        return (
-          <svg
-            key={x}
-            id={`stepper-${x}`}
-            className="ml-2"
-            ref={(el) => {
-              refArray.current[x] = el
-            }}
-            width="20"
-            height="6"
-          >
-            <rect width="300" height="100" />
-          </svg>
-        )
-      })}
-    </div>
+    <>
+      {scrollPosition >= 1000 && (
+        <div className="fixed flex right-0 top-1/2 z-10 rotate-90 transform -translate-y-1/2 w-[100px] h-[20px]">
+          {list.map((x) => {
+            return (
+              <svg
+                key={x}
+                id={`stepper-${x}`}
+                className="ml-2"
+                ref={(el) => {
+                  refArray.current[x] = el
+                }}
+                width="20"
+                height="6"
+              >
+                <rect width="300" height="100" />
+              </svg>
+            )
+          })}
+        </div>
+      )}
+    </>
   )
 }
