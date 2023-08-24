@@ -1,13 +1,15 @@
 'use client'
+import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import LightCircle from '../LightCircle'
-// import { useInView } from 'react-intersection-observer';
+// import SelfPage from '@/images/myself.png'
+import SelfPageBgImg from '@/images/bg.png'
+import WaveHand from '../WaveHand'
+// import BubbleChat from '../BubbleChat'
 
 export default function ProfilePage() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
-  //   const { ref, inView, entry } = useInView({
-  //     threshold: 0.2,
-  //   });
+  const [isMouseOver, setIsMouseOver] = useState(false)
 
   useEffect(() => {
     const handleMouseMove = (event) => {
@@ -15,20 +17,44 @@ export default function ProfilePage() {
     }
 
     window.addEventListener('mousemove', handleMouseMove)
-
     return () => {
       window.removeEventListener('mousemove', handleMouseMove)
     }
   }, [])
 
+  const handleMouseEnter = () => {
+    setIsMouseOver(true)
+  }
+
+  const handleMouseLeave = () => {
+    setIsMouseOver(false)
+  }
+
   return (
-    <div className="relative w-screen h-screen snap-start">
-      {<LightCircle x={mousePos.x} y={mousePos.y} />}
+    <div
+      className="relative w-screen h-screen snap-start"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      {isMouseOver && <LightCircle x={mousePos.x} y={mousePos.y} />}
+
+      <div className="absolute z-0 left-[20%] top-[5%] overflow-hidden bg-bgDark bg-cover bg-[50%] bg-no-repeat">
+        <Image
+          className="w-[800px]"
+          src={SelfPageBgImg}
+          alt="backgroud photo"
+        />
+        <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-bgDark bg-fixed opacity-60" />
+      </div>
       <div className="relative z-3 w-[1388px] h-full mx-auto lg:flex lg:justify-between lg:gap-4">
         <header className="flex flex-col self-center lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:py-24">
-          <div>
-            <p className="font-bold text-7xl">
-              Hi, I am Chan <span className="text-purple">Tse</span>
+          <div className="text-left">
+            <div className="relative mb-8">
+              {/* <BubbleChat clx={'absolute left-[380px] top-0'} /> */}
+            </div>
+            <p className="font-bold text-5xl">
+              Hi
+              <WaveHand />, I am Chan <span className="text-purple">Tse</span>
             </p>
             <p className="font-bold text-7xl">Web Developer</p>
             <p className="text-lg mt-3">Frontend engineer / Component base</p>

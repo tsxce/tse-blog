@@ -7,7 +7,7 @@ export default function SideStepper() {
   const screenNum = totalHeight / viewHeight
   const list = [...Array(screenNum).keys()]
   const refArray = useRef([])
-  console.log('~~~: ', typeof scrollPosition)
+
   const addIndexColor = useCallback(
     (p) => {
       refArray.current.forEach((refItem, index) => {
@@ -20,10 +20,12 @@ export default function SideStepper() {
     },
     [refArray],
   )
+
   useEffect(() => {
     const colorIndex = Math.ceil(scrollPosition / viewHeight)
     addIndexColor(colorIndex)
   }, [scrollPosition, viewHeight, addIndexColor])
+
   return (
     <>
       {scrollPosition >= 1000 && (

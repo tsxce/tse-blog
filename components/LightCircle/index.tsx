@@ -5,7 +5,7 @@ const r = 600
 export default function LightCircle({ x, y }) {
   return (
     <div
-      className="rounded-full"
+      className="rounded-full z-10"
       style={{
         position: 'absolute',
         width: r * 2 + 'px',
