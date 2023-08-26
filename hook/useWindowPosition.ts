@@ -4,7 +4,7 @@ import getTotalScrollHeight from '@/utils/getTotalScrollHeight'
 export default function useWindownPosition() {
   const [scrollPosition, setPosition] = useState(0)
   const [totalHeight, setTotalHeight] = useState(0)
-  const viewHeight = window.innerHeight
+
   useEffect(() => {
     function updatePosition() {
       setPosition(window.scrollY)
@@ -19,5 +19,5 @@ export default function useWindownPosition() {
     }
   }, [])
 
-  return { scrollPosition, totalHeight, viewHeight }
+  return { scrollPosition, totalHeight }
 }

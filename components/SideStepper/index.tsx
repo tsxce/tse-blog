@@ -1,10 +1,10 @@
 'use client'
 import useWindownPosition from '@/hook/useWindowPosition'
-import { useEffect, useRef, useCallback } from 'react'
+import { useEffect, useRef, useCallback, useState } from 'react'
 
 export default function SideStepper() {
-  const { scrollPosition, totalHeight, viewHeight } = useWindownPosition()
-  const screenNum = totalHeight / viewHeight
+  const { scrollPosition, totalHeight } = useWindownPosition()
+  const [screenNum, setScreenNum] = useState(0)
   const list = [...Array(screenNum).keys()]
   const refArray = useRef([])
 
@@ -22,9 +22,11 @@ export default function SideStepper() {
   )
 
   useEffect(() => {
+    const viewHeight = window.innerHeight
+    setScreenNum(totalHeight / viewHeight)
     const colorIndex = Math.ceil(scrollPosition / viewHeight)
     addIndexColor(colorIndex)
-  }, [scrollPosition, viewHeight, addIndexColor])
+  }, [scrollPosition, addIndexColor, totalHeight])
 
   return (
     <>
