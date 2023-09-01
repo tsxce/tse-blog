@@ -5,6 +5,7 @@ import LightCircle from '../LightCircle'
 // import SelfPage from '@/images/myself.png'
 import SelfPageBgImg from '@/images/bg.png'
 import WaveHand from '../WaveHand'
+import TechStack from '../TechStack'
 // import BubbleChat from '../BubbleChat'
 
 export default function ProfilePage() {
@@ -63,6 +64,7 @@ export default function ProfilePage() {
               the web.
             </p>
           </div>
+          <TechStack />
         </header>
         <div
           id="intro"
