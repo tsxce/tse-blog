@@ -1,24 +1,14 @@
-import Image from 'next/image'
-import techImages from '@/utils/techImageImport'
+import * as LogoIcon from './logoIcon'
 
 export default function TechStack() {
-  console.log(techImages)
   return (
-    <div className="flex w-[200px]">
-      {Object.keys(techImages).map((image, i) => {
-        return (
-          // <div className='w-2 h-2' key={i + 'image'}>
-          <Image
-            key={i}
-            className="ml-3"
-            width={14}
-            height={12}
-            src={techImages[image]['default']['src']}
-            alt=""
-          />
-          // </div>
-        )
-      })}
+    <div>
+      <div className="flex w-[200px] mt-8">
+        {Object.keys(LogoIcon).map((item) => {
+          console.log(item)
+          return LogoIcon[item]('w-8 ml-2 first:ml-0')
+        })}
+      </div>
     </div>
   )
 }
