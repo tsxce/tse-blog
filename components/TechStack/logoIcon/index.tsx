@@ -1,3 +1,6 @@
+/*
+Source from https://devicon.dev/
+*/
 export const jsIcon = (className) => {
   return (
     <svg className={className} viewBox="0 0 128 128">
