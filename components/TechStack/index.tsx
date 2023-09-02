@@ -2,12 +2,24 @@ import * as LogoIcon from './logoIcon'
 
 export default function TechStack() {
   return (
-    <div>
-      <div className="flex w-[200px] mt-8">
-        {Object.keys(LogoIcon).map((item) => {
-          console.log(item)
-          return LogoIcon[item]('w-8 ml-2 first:ml-0')
-        })}
+    <div className="mt-8">
+      <div className="flex">
+        {Object.keys(LogoIcon)
+          .slice(0, 9)
+          .map((item) => {
+            return LogoIcon[item](
+              'w-[30px] ml-3 cursor-pointer hover:scale-125 first:ml-0',
+            )
+          })}
+      </div>
+      <div className="flex mt-3">
+        {Object.keys(LogoIcon)
+          .slice(9)
+          .map((item) => {
+            return LogoIcon[item](
+              'w-[30px] ml-3 cursor-pointer hover:scale-125 first:ml-0',
+            )
+          })}
       </div>
     </div>
   )
