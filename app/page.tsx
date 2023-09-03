@@ -30,7 +30,7 @@ export default function Home() {
         </p>
       </div>
       <ProfilePage />
-      <div className="h-screen bg-purple"></div>
+      {/* <div className="h-screen bg-purple"></div> */}
     </main>
   )
 }

@@ -7,6 +7,7 @@ import SelfPageBgImg from '@/images/bg.png'
 import WaveHand from '../WaveHand'
 import TechStack from '../TechStack'
 // import BubbleChat from '../BubbleChat'
+import SocialMediaBar from '../SocialMediaBar'
 
 export default function ProfilePage() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
@@ -38,10 +39,10 @@ export default function ProfilePage() {
       onMouseLeave={handleMouseLeave}
     >
       {isMouseOver && <LightCircle x={mousePos.x} y={mousePos.y} />}
-
+      <SocialMediaBar />
       <div className="absolute z-0 left-[20%] top-[5%] overflow-hidden bg-bgDark bg-cover bg-[50%] bg-no-repeat">
         <Image
-          className="w-[800px]"
+          className="w-[560px]"
           src={SelfPageBgImg}
           alt="backgroud photo"
         />
