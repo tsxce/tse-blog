@@ -40,14 +40,14 @@ export default function ProfilePage() {
     >
       {isMouseOver && <LightCircle x={mousePos.x} y={mousePos.y} />}
       <SocialMediaBar />
-      <div className="absolute z-0 left-[20%] top-[5%] overflow-hidden bg-bgDark bg-cover bg-[50%] bg-no-repeat">
+      {/* <div className="absolute z-0 left-[20%] top-[5%] overflow-hidden bg-bgDark bg-cover bg-[50%] bg-no-repeat">
         <Image
           className="w-[560px]"
           src={SelfPageBgImg}
           alt="backgroud photo"
         />
         <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-bgDark bg-fixed opacity-60" />
-      </div>
+      </div> */}
       <div className="relative z-3 w-[1388px] h-full mx-auto lg:flex lg:justify-between lg:gap-4">
         <header className="flex flex-col self-center lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:py-24">
           <div className="text-left">
