@@ -23,13 +23,19 @@ module.exports = {
       },
       // that is animation class
       animation: {
-        fade: 'fadeOut 5s ease-in-out',
+        fadeOut: 'fadeOut 5s ease-in-out',
+        flicker: 'flicker 0.2s infinite',
       },
       // that is actual animation
       keyframes: (theme) => ({
         fadeOut: {
           '0%': { backgroundColor: theme('colors.purple') },
           '100%': { backgroundColor: theme('colors.transparent') },
+        },
+        flicker: {
+          '0%': { opacity: 0 },
+          '50%': { opacity: 1 },
+          '100%': { opacity: 0 },
         },
       }),
     },
