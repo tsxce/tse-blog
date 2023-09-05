@@ -24,7 +24,7 @@ module.exports = {
       // that is animation class
       animation: {
         fadeOut: 'fadeOut 5s ease-in-out',
-        flicker: 'flicker 0.2s infinite',
+        flicker: 'flicker 0.4s infinite',
       },
       // that is actual animation
       keyframes: (theme) => ({
