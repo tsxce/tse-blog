@@ -1,9 +1,9 @@
 const SocialMediaBar = () => {
   return (
-    <div className="flex absolute z-30 bottom-[50px] right-[300px]">
+    <div className="flex absolute z-30 bottom-[50px] right-0">
       <a href="https:linkedin.com/in/chen-x-6bb138215">
         <svg
-          className="w-10 cursor-pointer hover:scale-125"
+          className="w-8 cursor-pointer hover:scale-125"
           viewBox="0 0 128 128"
         >
           <path
@@ -19,7 +19,7 @@ const SocialMediaBar = () => {
 
       <a href="https://github.com/tsxce">
         <svg
-          className="w-10 ml-5 cursor-pointer hover:scale-125"
+          className="w-8 ml-5 cursor-pointer hover:scale-125"
           viewBox="0 0 128 128"
         >
           <g fill="#fff">
