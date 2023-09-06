@@ -39,14 +39,15 @@ export default function GptEffect({ clx, typingStr }: GptEffectProps) {
         clearInterval(intervalId)
         setCompletedTyping(true)
       }
-    }, 30)
+    }, 40)
     return () => clearInterval(intervalId)
   }, [typingStr])
 
   return (
     <span className={clx}>
       {displayResponse}
-      {!completedTyping && <CursorSVG />}
+      {/* {!completedTyping && <CursorSVG />} */}
+      <CursorSVG />
     </span>
   )
 }

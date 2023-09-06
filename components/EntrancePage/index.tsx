@@ -20,8 +20,8 @@ export default function EntrancePage() {
       />
       {/* <p className="absolute font-bold text-6xl animate-flicker">Hello, this is Tse.</p> */}
       <GptEffect
-        clx={'absolute font-bold text-6xl'}
-        typingStr={'Hello, this is Tse.'.split('')}
+        clx={'absolute font-bold text-6xl whitespace-pre-line'}
+        typingStr={'Greetings!\n this is Tse.\n Welcome to my world.'.split('')}
       />
       <p className="absolute text-xl animate-pulse bottom-[20px] left-1/2 transform -translate-x-1/2 cursor-pointer">
         Scroll Down
