@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import LightCircle from '../LightCircle'
 // import SelfPage from '@/images/myself.png'
-// import SelfPageBgImg from '@/images/bg.png'
+import SelfPageBgImg from '@/images/bg.png'
 import WaveHand from '../WaveHand'
 import TechStack from '../TechStack'
 // import BubbleChat from '../BubbleChat'
@@ -51,9 +51,9 @@ export default function ProfilePage() {
         <SocialMediaBar />
         <header className="flex flex-col self-center lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:py-24">
           <div className="text-left">
-            {/* <div className="relative mb-8">
-              <BubbleChat clx={'absolute left-[380px] top-0'} />
-            </div> */}
+            <div className="relative mb-8">
+              {/* <BubbleChat clx={'absolute left-[380px] top-0'} /> */}
+            </div>
             <p className="font-bold text-5xl">
               Hi
               <WaveHand />, I am Chan <span className="text-purple">Tse</span>

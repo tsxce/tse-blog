@@ -1,9 +1,9 @@
+'use client'
 import React, { useState, useEffect } from 'react'
+
 interface GptEffectProps {
   clx: string
   typingStr: string[]
-  completedTyping: boolean
-  handleCompletedTyping: (boolean) => void
 }
 
 function CursorSVG() {
@@ -25,27 +25,23 @@ function CursorSVG() {
   )
 }
 
-export default function GptEffect({
-  clx,
-  typingStr,
-  completedTyping,
-  handleCompletedTyping,
-}: GptEffectProps) {
+export default function GptEffect({ clx, typingStr }: GptEffectProps) {
   const [displayResponse, setDisplayResponse] = useState(false)
+  const [completedTyping, setCompletedTyping] = useState(false)
 
   useEffect(() => {
-    handleCompletedTyping(false)
+    setCompletedTyping(false)
     let i = 0
     const intervalId = setInterval(() => {
       setDisplayResponse(typingStr.slice(0, i))
       i++
       if (i > typingStr.length) {
         clearInterval(intervalId)
-        handleCompletedTyping(true)
+        setCompletedTyping(true)
       }
-    }, 100)
+    }, 30)
     return () => clearInterval(intervalId)
-  }, [typingStr, handleCompletedTyping])
+  }, [typingStr])
 
   return (
     <span className={clx}>
