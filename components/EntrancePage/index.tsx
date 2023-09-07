@@ -16,7 +16,7 @@ export default function EntrancePage() {
       />
       <ParticleCanvas
         className="absolute inset-0 pointer-events-none"
-        quantity={100}
+        quantity={66}
       />
       {/* <p className="absolute font-bold text-6xl animate-flicker">Hello, this is Tse.</p> */}
       <GptEffect

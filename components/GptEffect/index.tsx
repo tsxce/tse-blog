@@ -26,7 +26,7 @@ function CursorSVG() {
 }
 
 export default function GptEffect({ clx, typingStr }: GptEffectProps) {
-  const [displayResponse, setDisplayResponse] = useState(false)
+  const [displayResponse, setDisplayResponse] = useState([''])
   const [completedTyping, setCompletedTyping] = useState(false)
 
   useEffect(() => {
