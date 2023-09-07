@@ -7,10 +7,10 @@ export default function EntrancePage() {
   return (
     <div
       id="canvas-section"
-      className="relative flex justify-center items-center snap-start"
+      className="relative flex justify-center items-center snap-start h-screen w-screen overflow-hidden"
     >
       <Image
-        className="h-screen w-screen"
+        className="h-[110%] w-screen"
         src={ParticleMask}
         alt="canvas mask"
       />
