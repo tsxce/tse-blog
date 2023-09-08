@@ -16,7 +16,7 @@ function CursorSVG() {
     //   <rect x="10" y="6" width="4" height="12" fill="#fff" />
     // </svg>
     <svg
-      className="inline-block w-10 animate-flicker"
+      className="inline-block w-10 animate-flicker sm:w-5"
       viewBox="0 0 100 100"
       xmlns="http://www.w3.org/2000/svg"
     >

@@ -7,6 +7,14 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
+    screens: {
+      '2xl': { max: '1535px' },
+      // => @media (max-width: 1535px) { ... }
+      xl: { max: '1279px' },
+      lg: { max: '1023px' },
+      md: { max: '767px' },
+      sm: { max: '639px' },
+    },
     colors: {
       white: '#FFFFFF',
       bgDark: '#131315',
@@ -16,11 +24,12 @@ module.exports = {
       textGrey: '#908F99',
     },
     extend: {
-      backgroundImage: {
+      backgroundImage: (theme) => ({
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+        'hero-pattern': "url('/images/bg.png')",
+      }),
       // that is animation class
       animation: {
         fadeOut: 'fadeOut 5s ease-in-out',

@@ -47,9 +47,9 @@ export default function ProfilePage() {
         />
         <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-bgDark bg-fixed opacity-60" />
       </div> */}
-      <div className="relative z-3 w-[1088px] h-full mx-auto lg:flex lg:justify-between lg:gap-4">
+      <div className="relative z-3 w-[1088px] h-full mx-auto flex justify-between gap-4">
         <SocialMediaBar />
-        <header className="flex flex-col self-center lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:py-24">
+        <header className="flex flex-col self-center sticky top-0 max-h-screen w-1/2 py-24">
           <div className="text-left">
             <div className="relative mb-8">
               {/* <BubbleChat clx={'absolute left-[380px] top-0'} /> */}
@@ -68,7 +68,7 @@ export default function ProfilePage() {
         </header>
         <div
           id="intro"
-          className="flex flex-col self-center text-base font-mono pt-24 lg:w-1/2 lg:py-24"
+          className="flex flex-col self-center text-base font-mono pt-24 w-1/2 py-24"
         >
           <p className="mb-4">
             I have over 3+ years extensive experience in the web development
