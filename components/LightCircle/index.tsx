@@ -2,7 +2,12 @@ import React from 'react'
 
 const r = 600
 
-export default function LightCircle({ x, y }) {
+interface LightCircleProps {
+  x: number
+  y: number
+}
+
+export default function LightCircle({ x, y }: LightCircleProps) {
   return (
     <div
       className="rounded-full z-10"

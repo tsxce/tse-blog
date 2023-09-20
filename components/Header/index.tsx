@@ -13,7 +13,7 @@ export default function Header() {
     headerRef.current?.classList.remove('sticky-nav-full')
   }
 
-  function handleClickHeader(/** @type {MouseEvent} */ ev) {
+  function handleClickHeader() {
     // if (![navRef.current, titleRef.current].includes(ev.target)) return
     window.scrollTo({
       top: 0,

@@ -14,7 +14,7 @@ export default function ProfilePage() {
   const [isMouseOver, setIsMouseOver] = useState(false)
 
   useEffect(() => {
-    const handleMouseMove = (event) => {
+    const handleMouseMove = (event: any) => {
       setMousePos({ x: event.clientX, y: event.clientY })
     }
 

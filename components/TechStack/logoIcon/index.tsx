@@ -2,11 +2,11 @@
 Source from https://devicon.dev/
 */
 
-const withClxSvg = (className, svg) => {
-  return <div className={className + ' cursor-pointer'}>{svg}</div>
-}
+// const withClxSvg = (className, svg) => {
+//   return <div className={className + ' cursor-pointer'}>{svg}</div>
+// }
 
-export const jsIcon = (className) => {
+export const jsIcon = (className: string) => {
   return (
     <svg className={className} viewBox="0 0 128 128">
       <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"></path>
@@ -18,7 +18,7 @@ export const jsIcon = (className) => {
   )
 }
 
-// export const jsIcon = (className) => {
+// export const jsIcon = (className: string) => {
 //   return withClxSvg(
 //     className,
 //     <svg viewBox="0 0 128 128">
@@ -31,7 +31,7 @@ export const jsIcon = (className) => {
 //   )
 // }
 
-export const tsIcon = (className) => {
+export const tsIcon = (className: string) => {
   return (
     <svg className={className} viewBox="0 0 128 128">
       <path fill="#fff" d="M22.67 47h99.67v73.67H22.67z"></path>
@@ -44,7 +44,7 @@ export const tsIcon = (className) => {
   )
 }
 
-export const reactIcon = (className) => {
+export const reactIcon = (className: string) => {
   return (
     <svg className={className} viewBox="0 0 128 128">
       <g fill="#61DAFB">
@@ -55,7 +55,7 @@ export const reactIcon = (className) => {
   )
 }
 
-export const vueIcon = (className) => {
+export const vueIcon = (className: string) => {
   return (
     <svg className={className} viewBox="0 0 128 128">
       <path
@@ -74,7 +74,7 @@ export const vueIcon = (className) => {
   )
 }
 
-export const figmaIcon = (className) => {
+export const figmaIcon = (className: string) => {
   return (
     <svg className={className} viewBox="0 0 128 128">
       <path
@@ -101,7 +101,7 @@ export const figmaIcon = (className) => {
   )
 }
 
-export const webpackIcon = (className) => {
+export const webpackIcon = (className: string) => {
   return (
     <svg className={className} viewBox="0 0 128 128">
       <path
@@ -116,7 +116,7 @@ export const webpackIcon = (className) => {
   )
 }
 
-export const sassIcon = (className) => {
+export const sassIcon = (className: string) => {
   return (
     <svg className={className} viewBox="0 0 128 128">
       <path
@@ -129,7 +129,7 @@ export const sassIcon = (className) => {
   )
 }
 
-export const gitIcon = (className) => {
+export const gitIcon = (className: string) => {
   return (
     <svg className={className} viewBox="0 0 128 128">
       <path
@@ -140,7 +140,7 @@ export const gitIcon = (className) => {
   )
 }
 
-export const htmlIcon = (className) => {
+export const htmlIcon = (className: string) => {
   return (
     <svg className={className} viewBox="0 0 128 128">
       <path
@@ -160,7 +160,7 @@ export const htmlIcon = (className) => {
   )
 }
 
-export const vsIcon = (className) => {
+export const vsIcon = (className: string) => {
   return (
     <svg className={className} viewBox="0 0 128 128">
       <path
@@ -183,7 +183,7 @@ export const vsIcon = (className) => {
   )
 }
 
-export const jestIcon = (className) => {
+export const jestIcon = (className: string) => {
   return (
     <svg className={className} viewBox="0 0 128 128">
       <path
@@ -194,7 +194,7 @@ export const jestIcon = (className) => {
   )
 }
 
-export const nextIcon = (className) => {
+export const nextIcon = (className: string) => {
   return (
     <svg className={className + ' bg-white'} viewBox="0 0 128 128">
       <path d="M64 0C28.7 0 0 28.7 0 64s28.7 64 64 64 64-28.7 64-64S99.3 0 64 0zm32.7 114.4L48.4 41.8h-6.8v50.1h6.8V55.3l44.2 61.5c-8.5 4.6-18.2 7.2-28.6 7.2-33.2.1-60.1-26.8-60.1-60S30.8 3.9 64 3.9s60.1 26.9 60.1 60.1c0 21.1-10.9 39.7-27.4 50.4z"></path>
@@ -203,13 +203,13 @@ export const nextIcon = (className) => {
   )
 }
 
-// export const phpIcon = (className) => {
+// export const phpIcon = (className: string) => {
 //   return (
 //     <img className={className} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
 //   )
 // }
 
-export const storybookIcon = (className) => {
+export const storybookIcon = (className: string) => {
   return (
     <svg className={className} viewBox="0 0 128 128">
       <path
@@ -220,7 +220,7 @@ export const storybookIcon = (className) => {
   )
 }
 
-export const cssIcon = (className) => {
+export const cssIcon = (className: string) => {
   return (
     <svg className={className} viewBox="0 0 128 128">
       <path
@@ -251,7 +251,7 @@ export const cssIcon = (className) => {
   )
 }
 
-export const tailwindcssIcon = (className) => {
+export const tailwindcssIcon = (className: string) => {
   return (
     <svg className={className + ' bg-white'} viewBox="0 0 128 128">
       <defs>
@@ -280,7 +280,7 @@ export const tailwindcssIcon = (className) => {
   )
 }
 
-export const firebaseIcon = (className) => {
+export const firebaseIcon = (className: string) => {
   return (
     <svg className={className} viewBox="0 0 128 128">
       <g fill="#f58220">
@@ -290,7 +290,7 @@ export const firebaseIcon = (className) => {
   )
 }
 
-export const dockerIcon = (className) => {
+export const dockerIcon = (className: string) => {
   return (
     <svg className={className} viewBox="0 0 128 128">
       <path
@@ -381,7 +381,7 @@ export const dockerIcon = (className) => {
   )
 }
 
-export const awsIcon = (className) => {
+export const awsIcon = (className: string) => {
   return (
     <svg className={className} viewBox="0 0 128 128">
       <path
