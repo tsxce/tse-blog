@@ -47,7 +47,7 @@ export default function ProfilePage() {
         />
         <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-bgDark bg-fixed opacity-60" />
       </div> */}
-      <div className="flex sm:flex-col sm:justify-center absolute z-30 bottom-[50px] sm:bottom-8 right-0 sm:right-3">
+      <div className="flex sm:flex-col sm:justify-center absolute z-30 bottom-[50px] sm:bottom-8 right-[50px] sm:right-3">
         <SocialMediaBar />
       </div>
       <div className="relative z-3 w-[1088px] sm:w-auto h-full mx-auto flex justify-between sm:block gap-4">
