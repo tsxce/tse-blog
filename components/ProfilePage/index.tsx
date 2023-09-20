@@ -34,7 +34,7 @@ export default function ProfilePage() {
 
   return (
     <div
-      className="relative w-screen h-screen snap-start"
+      className="relative w-screen h-screen sm:h-auto snap-start sm:px-6"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -47,19 +47,22 @@ export default function ProfilePage() {
         />
         <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-bgDark bg-fixed opacity-60" />
       </div> */}
-      <div className="relative z-3 w-[1088px] h-full mx-auto flex justify-between gap-4">
+      <div className="flex sm:flex-col sm:justify-center absolute z-30 bottom-[50px] sm:bottom-8 right-0 sm:right-3">
         <SocialMediaBar />
-        <header className="flex flex-col self-center sticky top-0 max-h-screen w-1/2 py-24">
-          <div className="text-left">
-            <div className="relative mb-8">
-              {/* <BubbleChat clx={'absolute left-[380px] top-0'} /> */}
-            </div>
+      </div>
+      <div className="relative z-3 w-[1088px] sm:w-auto h-full mx-auto flex justify-between sm:block gap-4">
+        <header className="flex flex-col self-center sm:justify-center sticky sm:relative top-0 max-h-screen w-1/2 sm:w-auto py-24 sm:py-12">
+          <div className="text-left sm:text-center">
             <p className="font-bold text-5xl">
-              Hi
-              <WaveHand />, I am Chan <span className="text-purple">Tse</span>
+              <span className="sm:mb-10">
+                Hi
+                <WaveHand />,
+              </span>
+              <br className="hidden sm:inline-block" />I am Chan{' '}
+              <span className="text-purple">Tse</span>
             </p>
             <p className="text-xl mt-3">Frontend engineer</p>
-            <p className="text-textGrey mt-4 max-w-xs">
+            <p className="text-textGrey mt-4 sm:mt-2 max-w-xs sm:max-w-none">
               I build accessible, inclusive products and digital experiences for
               the web.
             </p>
@@ -68,7 +71,7 @@ export default function ProfilePage() {
         </header>
         <div
           id="intro"
-          className="flex flex-col self-center text-base font-mono pt-24 w-1/2 py-24"
+          className="flex flex-col self-center text-base sm:text-sm font-mono sm:text-center pt-24 sm:pt-0 w-1/2 sm:w-auto py-24"
         >
           <p className="mb-4">
             I have over 3+ years extensive experience in the web development
