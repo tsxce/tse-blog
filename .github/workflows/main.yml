@@ -10,6 +10,9 @@ jobs:
       runs-on: ubuntu-latest
   
       steps:
+        - name: Print directory path
+          run: echo "Current directory path is: $GITHUB_WORKSPACE"
+
         - name: Install and build
           uses: actions/setup-node@v1
           with:
