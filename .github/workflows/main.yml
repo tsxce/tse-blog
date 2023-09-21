@@ -10,16 +10,15 @@ jobs:
       runs-on: ubuntu-latest
   
       steps:
+        - name: Checkout Repo
+          uses: actions/checkout@v2.3.2
+
         - name: Install and build
           uses: actions/setup-node@v1
           with:
             node-version: 16
         - run: npm install -g yarn
 
-        - name: Print directory path
-          run: echo "$GITHUB_WORKSPACE"
-        - run: |
-            cd ..
         - name: Print directory path
           run: echo "$GITHUB_WORKSPACE"
 
