@@ -17,6 +17,10 @@ jobs:
         - run: npm install -g yarn
         - name: Print directory path
           run: echo "$GITHUB_WORKSPACE"
+        - run: |
+            cd /home/runner/work/tse-blog
+        - name: Print directory path
+          run: echo "$GITHUB_WORKSPACE"
         - run: yarn install --frozen-lockfile
           working-directory: /
         - run: yarn build
