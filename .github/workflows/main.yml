@@ -10,8 +10,11 @@ jobs:
       runs-on: ubuntu-latest
   
       steps:
+        - name: Checkout code
+          uses: actions/checkout@v2
+  
         - name: Print directory path
-          run: echo "Current directory path is: $GITHUB_WORKSPACE"
+          run: echo "$GITHUB_WORKSPACE"
 
         - name: Install and build
           uses: actions/setup-node@v1
