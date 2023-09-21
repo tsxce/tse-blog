@@ -21,8 +21,8 @@ jobs:
             cd ..
         - name: Print directory path
           run: echo "$GITHUB_WORKSPACE"
-        - run: yarn install --frozen-lockfile
-          working-directory: /
+        - name: Install Dependencies
+          run: yarn install
         - run: yarn build
           working-directory: /
 
