@@ -14,10 +14,11 @@ jobs:
           uses: actions/setup-node@v1
           with:
             node-version: 16
-        - run: cd spacebar/spacebar
         - run: npm install -g yarn
         - run: yarn install --frozen-lockfile
+          working-directory: /
         - run: yarn build
+          working-directory: /
 
         - name: Set up AWS credentials
           uses: aws-actions/configure-aws-credentials@v1
