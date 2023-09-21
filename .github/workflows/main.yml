@@ -15,14 +15,20 @@ jobs:
           with:
             node-version: 16
         - run: npm install -g yarn
+
         - name: Print directory path
           run: echo "$GITHUB_WORKSPACE"
         - run: |
             cd ..
         - name: Print directory path
           run: echo "$GITHUB_WORKSPACE"
+
         - name: Install Dependencies
           run: yarn install
+
+        - name: Print directory path
+          run: echo "$GITHUB_WORKSPACE"
+
         - name: build
           run: yarn build
 
