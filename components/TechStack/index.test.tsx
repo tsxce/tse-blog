@@ -2,7 +2,7 @@ import { render, screen, within } from '@testing-library/react'
 import TechStack from './index'
 
 // Test if TechStack renders correctly in mobile view
-test('renders TechStack correctly in mobile view', () => {
+it('renders TechStack correctly in mobile view', () => {
   render(<TechStack />)
 
   const mobileView = screen.getByTestId('tech-stack-mobile-view')
@@ -13,7 +13,7 @@ test('renders TechStack correctly in mobile view', () => {
 })
 
 // Test if TechStack renders correctly in desktop view
-test('renders TechStack correctly in desktop view', () => {
+it('renders TechStack correctly in desktop view', () => {
   render(<TechStack />)
 
   const desktopView = screen.getByTestId('tech-stack-desktop-view')
