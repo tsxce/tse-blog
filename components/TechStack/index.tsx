@@ -3,7 +3,10 @@ import * as LogoIcon from './logoIcon'
 export default function TechStack() {
   return (
     <>
-      <div className="relative mt-8 sm:hidden">
+      <div
+        data-testId="tech-stack-desktop-view"
+        className="relative mt-8 sm:hidden"
+      >
         <div className="flex">
           {Object.keys(LogoIcon)
             .slice(0, 9)
@@ -24,7 +27,10 @@ export default function TechStack() {
         </div>
       </div>
       {/* For mobile */}
-      <div className="relative mt-4 hidden sm:block">
+      <div
+        data-testId="tech-stack-mobile-view"
+        className="relative mt-4 hidden sm:block"
+      >
         <div className="flex justify-center mt-6">
           {Object.keys(LogoIcon)
             .slice(0, 4)

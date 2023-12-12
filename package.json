@@ -9,7 +9,7 @@
     "lint": "next lint",
     "prettier:check": "prettier --check --ignore-path .gitignore .",
     "prettier": "prettier --write --ignore-path .gitignore .",
-    "test": "jest",
+    "test": "jest --silent",
     "test:watch": "jest --watch",
     "test:ci": "jest --ci"
   },
