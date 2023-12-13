@@ -1,0 +1,25 @@
+name: Pull request check
+
+on:
+  pull_request: 
+    branches:
+      - deploy
+      - main
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v2.3.2
+      
+            - name: Setup Node.js environment
+              uses: actions/setup-node@v1
+              with:
+                node-version: 16
+      
+            - name: Install Dependencies
+              run: npm install
+      
+            - name: Run Tests
+              run: npm run test
