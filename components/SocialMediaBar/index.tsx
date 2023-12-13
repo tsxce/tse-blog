@@ -1,6 +1,6 @@
 const SocialMediaBar = () => {
   return (
-    <>
+    <div data-testid="social-media-bar">
       <a data-testid="linkedin" href="https:linkedin.com/in/chen-x-6bb138215">
         <svg
           className="w-8 cursor-pointer hover:scale-125"
@@ -32,7 +32,7 @@ const SocialMediaBar = () => {
           </g>
         </svg>
       </a>
-    </>
+    </div>
   )
 }
 

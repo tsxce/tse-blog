@@ -34,6 +34,7 @@ export default function ProfilePage() {
 
   return (
     <div
+      data-testid="profile-page"
       className="relative w-screen h-screen sm:h-auto snap-start sm:px-6"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
