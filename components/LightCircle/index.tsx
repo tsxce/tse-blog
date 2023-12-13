@@ -11,7 +11,7 @@ export default function LightCircle({ x, y }: LightCircleProps) {
   return (
     <div
       className="rounded-full z-10"
-      data-testid="light-circle"
+      data-testid="light"
       style={{
         position: 'absolute',
         width: r * 2 + 'px',
